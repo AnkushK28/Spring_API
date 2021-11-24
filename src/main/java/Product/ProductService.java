@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class ProductService {
     public static List<ProductModel> ProductList = new ArrayList<>();
 
@@ -22,7 +22,8 @@ public class ProductService {
 
     }
 
-    public List<ProductModel> AllProduct() {
+    public List<ProductModel> AllProduct()
+    {
         return ProductList;
     }
 
@@ -36,7 +37,6 @@ public class ProductService {
             e.printStackTrace();
         }
         return (List<ProductModel>) product;
-
     }
 
     public ProductModel addproduct(ProductModel p) {
